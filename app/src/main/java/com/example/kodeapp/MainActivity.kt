@@ -3,6 +3,8 @@ package com.example.kodeapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -10,11 +12,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val activityOpen = findViewById<TextView>(R.id.secondText)
+        val textView = findViewById<TextView>(R.id.secondTextTwo)
+        val imageView = findViewById<ImageView>(R.id.imageTwo)
+        val textView2 = findViewById<TextView>(R.id.secondText)
 
-        activityOpen.setOnClickListener {
-            val intent = Intent(this, secondact::class.java)
-            startActivity(intent)
+        textView.setOnClickListener {
+            imageView.visibility = View.VISIBLE
+            textView2.visibility = View.GONE
         }
 
         }
